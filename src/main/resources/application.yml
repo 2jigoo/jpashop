@@ -1,0 +1,29 @@
+spring:
+  # profiles:
+  #   active: local
+    
+  datasource:
+    url: jdbc:h2:tcp://localhost/~/jpashop
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+    
+  jpa:
+    hibernate:
+      ddl-auto: create
+      # naming:
+        # implict-strategy: org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
+        # physical-strategy:  org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+    properties:
+      hibernate:
+#        show_sql: true #Sysout
+        format_sql: true
+  
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+
+
+logging.level:
+    org.hibernate.SQL: debug #log
+    org.hibernate.type: trace
